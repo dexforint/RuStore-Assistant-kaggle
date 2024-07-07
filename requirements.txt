@@ -1,0 +1,9 @@
+faiss-cpu
+torch
+transformers
+accelerate
+fastapi
+requests
+easyocr
+uvicorn
+pydantic
