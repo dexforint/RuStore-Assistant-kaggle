@@ -33,7 +33,7 @@ history = []
 async def main(request: Request):
     global history
     history = []
-    context = {"request": request, "ip": "localhost"}
+    context = {"request": request, "ip": "http://localhost"}
     return templates.TemplateResponse(name="index.html", context=context)
 
 
