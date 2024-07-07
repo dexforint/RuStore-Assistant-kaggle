@@ -37,7 +37,7 @@ function removeWaiting() {
 async function textRequest(text) {
 	let result;
 	try {
-		const response = await fetch(`${IP}:8000/query`, {
+		const response = await fetch(`${IP}/query`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -162,7 +162,7 @@ document.addEventListener("click", (event) => {
 });
 
 resetChatButton.addEventListener("click", function (event) {
-	fetch(`${IP}:8000/reset_history`, {
+	fetch(`${IP}/reset_history`, {
 		method: "POST",
 		headers: {
 			"Content-Type": "text/plain",
@@ -314,7 +314,7 @@ async function sendAudioToServer(audioBlob) {
 	formData.append("audio", audioBlob, "recording.webm");
 
 	try {
-		const response = await fetch(`${IP}:8000/upload_audio`, {
+		const response = await fetch(`${IP}/upload_audio`, {
 			method: "POST",
 			body: formData,
 		});
@@ -341,7 +341,7 @@ async function uploadImage(files) {
 	formData.append("image", file);
 
 	try {
-		const response = await fetch(`${IP}:8000/upload_image`, {
+		const response = await fetch(`${IP}/upload_image`, {
 			method: "POST",
 			body: formData,
 		});
